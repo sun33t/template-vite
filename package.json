@@ -7,6 +7,7 @@
     "node": ">=19.6.0"
   },
   "scripts": {
+    "prepare": "husky install",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
@@ -45,6 +46,8 @@
     "eslint-plugin-n": "^15.0.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.32.2",
+    "husky": ">=6",
+    "lint-staged": ">=10",
     "postcss": "^8.4.21",
     "prettier": "^2.8.7",
     "prettier-plugin-tailwindcss": "^0.2.7",
@@ -111,5 +114,9 @@
     "plugins": [
       "prettier-plugin-tailwindcss"
     ]
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "eslint --cache --fix",
+    "*.{js,jsx,ts,tsx,css,md,json}": "prettier --write"
   }
 }
