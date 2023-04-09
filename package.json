@@ -13,7 +13,8 @@
     "lint:check": "eslint .",
     "lint:fix": "eslint --fix .",
     "prettier:check": "prettier -c . --ignore-path .gitignore",
-    "prettier:write": "prettier -w . --ignore-path .gitignore"
+    "prettier:write": "prettier -w . --ignore-path .gitignore",
+    "commit": "git-cz"
   },
   "dependencies": {
     "class-variance-authority": "^0.5.1",
@@ -27,12 +28,16 @@
     "tailwind-merge": "^1.12.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.5.1",
+    "@commitlint/config-conventional": "^17.4.4",
+    "@commitlint/cz-commitlint": "^17.5.0",
     "@types/node": "^18.15.11",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@typescript-eslint/eslint-plugin": "^5.43.0",
     "@vitejs/plugin-react": "^3.1.0",
     "autoprefixer": "^10.4.14",
+    "commitizen": "^4.3.0",
     "eslint": "^8.0.1",
     "eslint-config-prettier": "^8.8.0",
     "eslint-config-standard-with-typescript": "^34.0.1",
@@ -46,6 +51,17 @@
     "tailwindcss": "^3.3.1",
     "typescript": "*",
     "vite": "^4.2.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "helpUrl": "This repo follows conventional-commit syntax https://www.conventionalcommits.org/en/v1.0.0/ . Please either format your commit messages to match or run `yarn commit` to access a cli which will step you through constructing a compliant commit message."
   },
   "eslintConfig": {
     "env": {
