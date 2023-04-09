@@ -5,6 +5,9 @@ import { defineConfig } from 'vite';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  css: {
+    postcss: '.config/',
+  },
   resolve: {
     alias: {
       '~ui': path.resolve(__dirname, 'src/components/ui'),
