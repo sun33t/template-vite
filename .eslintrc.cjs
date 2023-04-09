@@ -16,7 +16,7 @@ module.exports = {
     sourceType: 'module',
     project: ['tsconfig.json', 'tsconfig.node.json'],
   },
-  plugins: ['react', 'prettier-plugin-tailwindcss'],
+  plugins: ['react'],
   rules: {
     'import/no-absolute-path': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',

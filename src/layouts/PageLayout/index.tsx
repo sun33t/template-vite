@@ -1,7 +1,7 @@
 import { type ComponentProps } from 'react';
 import { Outlet } from 'react-router-dom';
 import { twMerge } from 'tailwind-merge';
-import { Navigation } from '~components/Navigation';
+import { Navigation } from '~layouts/Navigation';
 
 export const Layout = ({
   className,
